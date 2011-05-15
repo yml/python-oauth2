@@ -23,7 +23,7 @@ def upload_to_yfrog(file_path):
     body = {
         'key':YFROG_API_KEY,
         'message': "Test Echo OAuth",
-        'media':open(file_path)
+        'media':open(file_path, 'rb')
     }
     
     echo = Echo(realm=TWITTER_REALM,
